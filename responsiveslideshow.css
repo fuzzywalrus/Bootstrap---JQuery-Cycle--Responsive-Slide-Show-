@@ -1,0 +1,9 @@
+.slidecontainer {
+position: relative;
+z-index: 2;
+left: 0;
+top: 0;
+}
+.fullwidth {
+width: 100%;
+}
