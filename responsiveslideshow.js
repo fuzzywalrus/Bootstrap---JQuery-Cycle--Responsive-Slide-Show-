@@ -1,4 +1,5 @@
 $(document).ready(function() {
+//JQuery Cycle code
     $('#slideshow').after('<ul id="pager">').cycle({ 
 		fx:     'fade',
 		//prev: '#prev',
@@ -10,5 +11,5 @@ $(document).ready(function() {
   	pagerAnchorBuilder: function(idx, el) {
     return '<li><a href="cpage_7#"></a></li>';
     }
-	});  
+	});
 });
