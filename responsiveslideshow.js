@@ -3,7 +3,7 @@ $(document).ready(function() {
 		fx:     'fade',
 		//prev: '#prev',
 		//next: '#next',
-		pager:  '#pager',
+		//pager:  '#pager',
 		containerResize: 0,
 		width: '100%',
 		fit: 1,
