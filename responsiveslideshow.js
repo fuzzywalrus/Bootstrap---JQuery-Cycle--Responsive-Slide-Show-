@@ -1,3 +1,4 @@
+/* https://github.com/fuzzywalrus/Bootstrap---JQuery-Cycle--Responsive-Slide-Show-.git */
 $(document).ready(function() {
 //JQuery Cycle code
     $('#slideshow').after('<ul id="pager">').cycle({ 
