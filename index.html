@@ -14,7 +14,8 @@
         <script src="http://ajax.aspnetcdn.com/ajax/jquery.cycle/2.99/jquery.cycle.all.js"></script>
         <script src="responsiveslideshow.js"></script>
         <!-- Non CDN Code -->
-        <link href="" rel="stylesheet">
+        <link href="responsiveslideshow.css" rel="stylesheet">
+
     </head>
     <body>
 	    <!-- Initialzr -->
@@ -29,7 +30,8 @@
                     <a class="brand" href="#">Bootstrap Responsive + JQuery Cycle</a>
                     <div class="nav-collapse collapse">
                         <ul class="nav">
-                            <li class="active"><a href="#">Home</a></li>
+                        	<li class="active"><a href="https://github.com/fuzzywalrus/Bootstrap---JQuery-Cycle--Responsive-Slide-Show-.git">Responsive Slideshow</a></li>
+                            <li><a href="http://jquery.malsup.com/cycle/">JQuery Cycle</a></li>
                         </ul>
 
                     </div><!--/.nav-collapse -->
@@ -42,7 +44,7 @@
             <!-- Main hero unit for a primary marketing message or call to action -->
              <div class="hero-unit">
                 <h1>Bootstrap + JQuery Cycle (Responsive Slide Show)</h1>
-                <p>Resize this page and see what happens.</p>
+                <p>Making a responsive slide show from my personal favorite slide show. Resize this page and see what happens.</p>
             </div>
                <div class="row">
 	               	<div class="span12">
@@ -52,7 +54,7 @@
 								<img src="img/slideimage2.jpg" width="100%">
 								<img src="img/slideimage3.jpg" width="100%">				
 							</div>
-					<img src="img/blank.png" width="100%">
+					<img src="img/blank.png" width="100%" style="max-height:400px;">
 					</div>
                	</div>
 	            	            
@@ -63,29 +65,92 @@
             <div class="row">
                 <div class="span4">
                     <h2>Simple JS File</h2>
-                    <p>Look in the responsiveslideshow.js </p>
+                    <p>Check out the responsiveslideshow.js, simply loot the code, Pager already ready for your pagination needs, uncomment and go :) </p>
                     <p><a class="btn" href="responsiveslideshow.js">View details &raquo;</a></p>
                 </div>
                 <div class="span4">
-                    <h2>Heading</h2>
-                    <p>Donec id elit non mi porta gravida at eget metus. Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh, ut fermentum massa justo sit amet risus. Etiam porta sem malesuada magna mollis euismod. Donec sed odio dui. </p>
+                    <h2>Two Steps: JS + invisible PNG hack</h2>
+                    <p>Wouldn't it be great if HTML didn't need hacks? To ensure cross-browser compatibility (IE7+), an invisible PNG is require. </p>
                     <p><a class="btn" href="#">View details &raquo;</a></p>
                </div>
                 <div class="span4">
-                    <h2>Heading</h2>
-                    <p>Donec sed odio dui. Cras justo odio, dapibus ac facilisis in, egestas eget quam. Vestibulum id ligula porta felis euismod semper. Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh, ut fermentum massa justo sit amet risus.</p>
-                    <p><a class="btn" href="#">View details &raquo;</a></p>
+                    <h2>Works on mobile</h2>
+                    <p>Tested on Android 2.2+ and iOS4+. It even responds to device rotations. Perform of slide show transitions vary device to device.</p>
+                    <!-- <p><a class="btn" href="#">View details &raquo;</a></p> -->
                 </div>
             </div>
-
+            
             <hr>
+             <div class="row">
+            	<div class="span12">
+            		<p>Not all slide show are created equal, fortunately JQuery Cycle is exceptional and includes a containerResize property.  This allows the slideshow to resize. However, scaling a slideshow and having it maintain its height gets trickier. This project assumes the following: </p>
+            		<ol>
+            			<li>The slide height is known prior or can be determined</li>
+            			<li>The slide height is consistent</li>
+            			<li>A blank PNG/GIF of equal aspect ratio can be provided</li>
+            		</ol>
+            		<hr>
+            		<h2>Page Mark-Up</h2>
+            	</div>
+             </div>
+            <div class="row">
+            	<div class="span12">
+	            <section>
+		            <pre class="prettyprint linenums">
+		            	<ol class="linenums">
+		            		<li><span class="tag">&lt;div</span> <span class="atn">class=</span><span class="atv">"slidecontainer"</span><span class="tag">&gt;</span></li>
+		            		<li><span class="tag">&lt;id=</span><span class="atv">"slideshow"</span> <span class="atn">class=</span><span class="atv">"fullwidth"</span><span class="tag">&gt;</span></li>
+		            		<li><span class="tag">&lt;img </span><span class="atn">src=</span><span class="atv">"img/slideimage1.jpg"</span><span class="atn"> width=</span><span class="atv">"100%"</span><span class="tag">&gt;</span></li>
+		            		<li><span class="tag">&lt;img</span> <span class="atn">src=</span><span class="atv">"img/slideimage2.jpg"</span><span class="atn"> width=</span><span class="atv">"100%"</span><span class="tag">&gt;</span></li>
+		            		<li><span class="tag">&lt;img</span> <span class="atn">src=</span><span class="atv">"img/slideimage3.jpg"</span><span class="atn"> width=</span><span class="atv">"100%"</span><span class="tag">&gt;</span></li>
+		            		<li><span class="tag">&lt;div&gt;</span></li>
+		            		<li><span class="tag">&lt;img</span> <span class="atn">src=</span><span class="atv">"img/blank.png"</span><span class="atn"> width=</span><span class="atv">"100%"</span><span class="tag">&gt;</span></li>
+		            		<li><span class="tag">&lt;div&gt;</span></li>
+		            	</ol>
+					</pre>
+	            </section>
+            	</div>
+            </div>
+            
+                  <div class="row">
+                  	<div class="span3">
+                  		<h2>Scaffolding</h2>
+	                  	Resize the window. The Slide show works even in scaffolding!
+                  	</div>
+	               	<div class="span9">
+		               	<div class="slidecontainer">
+			               	<div  id="slideshow2" class="fullwidth" >
+								<img src="img/slideimage1.jpg" width="100%">
+								<img src="img/slideimage2.jpg" width="100%">
+								<img src="img/slideimage3.jpg" width="100%">				
+							</div>
+					<img src="img/blank.png" width="100%" style="max-height:400px;">
+					</div>
+               	</div>
 
             <footer>
                 <p>&copy; Image Credits: <a href="http://www.flickr.com/photos/petehogan/">3dpete</a>, <a href="http://www.flickr.com/photos/rodneykeeling/">rodneykeeling</a></p>
             </footer>
 
         </div> <!-- /container -->
-
-             <script>window.jQuery || document.write('<script src="js/vendor/jquery-1.8.3.min.js"><\/script>')</script>
+        
+        
+<script>
+$(document).ready(function() {
+    $('#slideshow2').after('<ul id="pager2">').cycle({ 
+		fx:     'fade',
+		//prev: '#prev',
+		//next: '#next',
+		//pager:  '#pager',
+		containerResize: 0,
+		width: '100%',
+		fit: 1,
+  	pagerAnchorBuilder: function(idx, el) {
+    return '<li><a href="cpage_7#"></a></li>';
+    }
+	});  
+});
+</script>
+<script>window.jQuery || document.write('<script src="js/vendor/jquery-1.8.3.min.js"><\/script>')</script>
     </body>
 </html>
