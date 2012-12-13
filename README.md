@@ -5,3 +5,5 @@ This a simple way to integrate JQuery Cycle with Responsive design, its designed
 Note: Pagers are a bit trickier and will require a lot of height hacking.
 
 [See a Live Demo](http://htmlpreview.github.com/?https://github.com/fuzzywalrus/Bootstrap---JQuery-Cycle--Responsive-Slide-Show-/blob/master/index.html)
+
+[Wiki Instructions](https://github.com/fuzzywalrus/Bootstrap---JQuery-Cycle--Responsive-Slide-Show-/wiki/Main-Page)
