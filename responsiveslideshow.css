@@ -4,21 +4,17 @@
 }
 .blank {max-height: 250px}
 @media (max-width: 979px) and (min-width: 768px) {
-	.blank {max-height: 200px}
 }
 @media (max-width: 767px) { 
 	.hero-unit {padding: 30px;}
 	.hero-unit h1 { font-size: 48px} 
 	.hero-unit {margin-bottom: 0px;}
 	.slidemargin {margin: 5px;}
-		.blank {max-height: 170px}
 }
 @media (max-width:767) and (min-width:600px) {
-		.blank {min-height: 180px}
 
 }
 @media (max-width:599px) {
-		.blank {min-height: 216px}
 
 }
 /*======= Bootstrap Prettify CSS ========= */

@@ -13,16 +13,18 @@ $(document).ready(function() {
 	    return '<li><a href="cpage_7#"></a></li>';
 	    }
 	});
-	
+
 //This resizes the blank image in the resize example
 	//initglitch fix 
 	var initfix = 18;
-	
+
 	///on resize, set blank image height
-	function imageresize() { 
-		var imgHeight = $("#slide1").height();
-		$("#blankimg").css("height", imgHeight+initfix);
-	}
+	function imageresize() {
+		$(".slidecontainer").each(function () {
+			  var imgHeight = $(this).find(".slide1").height();
+			  $(this).find(".blankimg").css("height", imgHeight+initfix);
+	    });
+	};
 	$(window).bind("resize", function(){
 		//clears the initfix
 		initfix = 0;

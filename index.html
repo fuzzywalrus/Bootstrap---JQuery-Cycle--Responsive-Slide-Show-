@@ -12,8 +12,9 @@
         <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.8.3/jquery.min.js"></script>
         <script src="http://netdna.bootstrapcdn.com/twitter-bootstrap/2.2.2/js/bootstrap.min.js"></script>
         <script src="http://ajax.aspnetcdn.com/ajax/jquery.cycle/2.99/jquery.cycle.all.js"></script>
-        <script src="responsiveslideshow.js"></script>
         <!-- Non CDN Code -->
+        <script src="responsiveslideshow.js"></script>
+        <script src="responsiveadditional.js"></script>
         <link href="responsiveslideshow.css" rel="stylesheet">
 
     </head>
@@ -50,7 +51,7 @@
 	               	<div class="span12">
 		               	<div class="slidecontainer">
 			               	<div  id="slideshow" class="fullwidth" >
-								<img src="img/slideimage1.jpg" width="100%">
+								<img src="img/slideimage1.jpg" width="100%" >
 								<img src="img/slideimage2.jpg" width="100%">
 								<img src="img/slideimage3.jpg" width="100%">				
 							</div>
@@ -120,11 +121,11 @@
 	               	<div class="span9">
 		               	<div class="slidecontainer">
 			               	<div  id="slideshow2" class="fullwidth" >
-								<img src="img/slideimage1.jpg" width="100%">
-								<img src="img/slideimage2.jpg" width="100%">
-								<img src="img/slideimage3.jpg" width="100%">				
+								<div class="slide1"><img src="img/slideimage1.jpg"></div>
+								<div><img src="img/slideimage2.jpg" width="100%"></div>
+								<div><img src="img/slideimage3.jpg" width="100%"></div>				
 							</div>
-							<img src="img/blank.png" width="100%" style="max-height:400px;">
+							<img src="img/blank.png" width="100%" style="max-height:400px;" class="">
 						</div>
 					</div>
                   </div>
@@ -137,52 +138,31 @@
                   	</div>
                  </div>
                   
-                  
-                  
-                  <div class="row">
-	               	<div class="span9">
-		               	<div class="slidecontainer">
-			               	<div  id="slideshow3" class="fullwidth" >
-								<div><div class="slidemargin"><h3>This example uses JQuery to regulate the blank.png</h3>Capture applications magnetic, "reinvent leverage systems viral collaborative, syndicate seize; enterprise, reinvent podcasts." Standards-compliant deploy value capture social front-end feeds bleeding-edge intuitive; bleeding-edge one-to-one create.</div>
-								</div>
-								<div style="background-color:#EEE;"><div class="slidemargin">
-									 Rich-clientAPIs 24/365 cutting-edge iterate seamless platforms feeds open-source content podcasts interactive dot-com data-driven, enable 24/7 matrix, redefine architectures communities networkeffects.</div>
-								</div>
-											
-							</div>
-					<img src="img/blank.png" width="100%" class="blank">
-		               	</div>
-					</div>
-						<div class="span3">
-                  		<h4>Using Divs</h4>
-	                  	Divs are trickier as the blank png media querying to use the blank PNG hack. However, JQuery can be used to grab the height of the slides and set the blank PNG. This example uses media queries.
-                  	</div>
-               	</div>
-                
-                
-                <div class="row">
+                                <div class="row">
                 	<div class="span3">
                   		<h4>Using JQuery to Resize</h4>
-	                  	JQuery is more accurate writing a mess of Media Queries
+	                  	<p>The Responsive Slideshow JS includes a imageresize(); function grabs the height of any div within the slide show with the class of "slide1", and scales according to its height. </p>
 	               </div>
 	               
 	               	<div class="span9">
 		               	<div class="slidecontainer">
-			               	<div  id="slideshow4" class="fullwidth" >
-								<div style="background-color:#EEE;"id="slide1"><div class="slidemargin"><h3>You can even use Divs</h3>Dynamic reintermediate engage holistic incentivize transparent deliver interactive repurpose envisioneer remix convergence engage. Platforms web-enabled capture engineer real-time incentivize open-source models impactful. Open-source frictionless web-enabled, "networks," schemas, "systems, beta-test," strategic; iterate, extend partnerships repurpose seamless share relationships.</div>
+			               	<div  id="slideshow4" class="fullwidth slidetarget" >
+								<div style="background-color:#EEE;" class="slide1"><div class="slidemargin"><h3>You can even use Divs</h3>Dynamic reintermediate engage holistic incentivize transparent deliver interactive repurpose envisioneer remix convergence engage. Platforms web-enabled capture engineer real-time incentivize open-source models impactful. Open-source frictionless web-enabled, "networks," schemas, "systems, beta-test," strategic; iterate, extend partnerships repurpose seamless share relationships.</div>
 								</div>
 								<div><div class="slidemargin">
 									  Compelling ROI capture interactive granular networking semantic redefine methodologies holistic granular web-enabled platforms global benchmark. Efficient cutting-edge, deliver turn-key dynamic strategic scalable share eyeballs integrate AJAX-enabled relationships. Implement systems visualize cross-media, efficient channels cultivate harness; webservices interactive engage dynamic convergence web-readiness, transform value transition.</div>
 								</div>
 											
 							</div>
-					<img src="img/blank.png" width="100%" id="blankimg">
+							<div class="blankimg"></div>
 		               	</div>
 					</div>
 
                	</div>
                   
-                  
+
+   
+
             <footer>
                 <p>&copy; Image Credits: <a href="http://www.flickr.com/photos/petehogan/">3dpete</a>, <a href="http://www.flickr.com/photos/rodneykeeling/">rodneykeeling</a></p>
             </footer>
@@ -190,46 +170,6 @@
         </div> <!-- /container -->
         
         
-<script>
-$(document).ready(function() {
-    $('#slideshow2').after('<ul id="pager2">').cycle({ 
-		fx:     'fade',
-		//prev: '#prev',
-		//next: '#next',
-		//pager:  '#pager',
-		containerResize: 0,
-		width: '100%',
-		fit: 1,
-  	pagerAnchorBuilder: function(idx, el) {
-    return '<li><a href="cpage_7#"></a></li>';
-    }
-	});  
-	$('#slideshow3').after('<ul id="pager3">').cycle({ 
-		fx:     'fade',
-		//prev: '#prev',
-		//next: '#next',
-		//pager:  '#pager',
-		containerResize: 0,
-		width: '100%',
-		fit: 1,
-  	pagerAnchorBuilder: function(idx, el) {
-    return '<li><a href="cpage_7#"></a></li>';
-    }
-	}); 
-	$('#slideshow4').after('<ul id="pager3">').cycle({ 
-		fx:     'fade',
-		//prev: '#prev',
-		//next: '#next',
-		//pager:  '#pager',
-		containerResize: 0,
-		width: '100%',
-		fit: 1,
-  	pagerAnchorBuilder: function(idx, el) {
-    return '<li><a href="cpage_7#"></a></li>';
-    }
-	});  
-});
-</script>
 <script>window.jQuery || document.write('<script src="js/vendor/jquery-1.8.3.min.js"><\/script>')</script>
     </body>
 </html>
